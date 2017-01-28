@@ -1,0 +1,41 @@
+{
+  "name": "self-import",
+  "version": "0.0.0",
+  "description": "Allows requiring of own modules like dependency modules",
+  "keywords": [
+    "import",
+    "require",
+    "self-require",
+    "self-import"
+  ],
+  "main": "index.js",
+  "bin": "bin/self-import.js",
+  "files": [
+    "index.js",
+    "bin"
+  ],
+  "scripts": {
+    "pretest": "rimraf test/simple-pkg/node_modules && rimraf test/scoped-pkg/node_modules",
+    "test": "standard && tape test",
+    "prepublish": "node bin/self-import"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zkochan/self-import.git"
+  },
+  "author": "Zoltan Kochan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zkochan/self-import/issues"
+  },
+  "homepage": "https://github.com/zkochan/self-import#readme",
+  "dependencies": {
+    "load-json-file": "^2.0.0",
+    "symlink-dir": "^1.0.1"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.4",
+    "standard": "^8.6.0",
+    "tape": "^4.6.3"
+  }
+}
