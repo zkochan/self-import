@@ -21,7 +21,7 @@ a client module would see it.
 ## Installation
 
 ```
-npm i -D self-install
+npm i -D self-import
 ```
 
 ## Usage
